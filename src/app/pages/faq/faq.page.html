@@ -1,0 +1,34 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-menu-button>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="home" icon="chevron-back-outline" text="" mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>faq</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_div ion-margin-horizontal">
+    <ion-item mode="md" lines="none">
+      <ion-label class="question_lbl" mode="md">How it works ?
+        <p *ngIf="isshow" class="data_p"> Please contact Hitachi team for demo
+        </p>
+      </ion-label>
+      <ion-icon [name]=" isshow ==0 ? 'chevron-down-outline' :'chevron-up-outline'" slot="end" (click)="isdata()">
+      </ion-icon>
+
+    </ion-item>
+    <ion-item mode="md" lines="none">
+      <ion-label class="question_lbl" mode="md">How to signin?
+        <p *ngIf="isdetail" class="data_p">Please contact Hitachi team for demo
+        </p>
+      </ion-label>
+      <ion-icon [name]="isdetail ==0 ? 'chevron-down-outline' :'chevron-up-outline'" slot="end" (click)="detail()">
+      </ion-icon>
+    </ion-item>
+  </div>
+</ion-content>

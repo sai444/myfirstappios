@@ -1,0 +1,113 @@
+ion-content {
+  .car_img_div {
+    margin-top: 30px;
+    text-align: center;
+    .name {
+      font-size: 20px;
+      color: var(--black);
+      font-family: "nunito_sb";
+    }
+  }
+  .div_lbl {
+    font-size: 16px;
+    color: var(--black);
+    font-family: "nunito_sb";
+    margin-top: 25px;
+  }
+  .bill_detail {
+    height: 181px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.16);
+    padding-top: 15px;
+    .bill_p {
+      font-size: 16px;
+      color: var(--black);
+      font-family: "nunito_sb";
+      margin-top: 0px;
+      margin-bottom: 5px;
+      padding: 0px 13px;
+    }
+    .discount {
+      padding-bottom: 15px;
+      border-bottom: dotted;
+      border-bottom-width: 1px;
+      border-bottom-color: var(--lht_gray);
+    }
+    .total {
+      color: var(--my_theme);
+      padding-top: 5px;
+    }
+  }
+  .payment_div {
+    height: 224px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.16);
+
+    .payment_item {
+      border-bottom: dotted;
+      border-bottom-width: 1px;
+      border-bottom-color: var(--lht_gray);
+    }
+    .info_lbl {
+      font-size: 16px;
+      font-family: "nunito_sb";
+      color: var(--black);
+      margin-right: 0;
+      .each_div {
+        font-size: 14px;
+        font-family: "nunito_r";
+        color: var(--lht_gray);
+      }
+      .recipient_div {
+        display: flex;
+        padding-left: 25px;
+        font-size: 16px;
+        font-family: "nunito_sb";
+        margin-top: 3px;
+        ion-checkbox {
+          margin-left: 10px;
+          margin-top: 0px;
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+  .btn_div {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0px;
+    padding: 0px 10px;
+    .cash_p {
+      display: flex;
+      align-items: center;
+      ion-icon {
+        margin-right: 10px;
+      }
+      margin: auto;
+      color: var(--my_theme);
+      font-size: 14px;
+      font-family: "nunito_sb";
+    }
+  }
+  .segment_div {
+    height: 35px;
+    width: 100%;
+    display: flex;
+    background-color: var(--my_theme);
+
+    margin-bottom: 10px;
+    .data_div {
+      color: var(--white);
+      font-size: 14px;
+      font-family: "nunito_sb";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 33.33%;
+    }
+
+    .select_div {
+      background-color: var(--select_clr);
+    }
+  }
+}

@@ -1,0 +1,126 @@
+<ion-header class="ion-no-border">
+
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      H Tracker
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- <ion-searchbar type="text" debounce="500" (ionChange)="getItems($event)"></ion-searchbar>
+  <ion-list *ngIf="isItemAvailable">
+      <ion-item *ngFor="let item of items">{{ item }}</ion-item>
+  </ion-list>-->
+  <ion-item> 
+    <ion-label>Thing</ion-label>
+    <ionic-selectable
+    
+      [(ngModel)]="port.device"
+      [items]="ports"
+      itemValueField="device"
+      itemTextField="device"
+      [canSearch]="true"
+      (onChange)="portChange($event)">
+    </ionic-selectable>
+  </ion-item>
+  <ion-item>
+    <ion-label>C Zone</ion-label>
+    <ionic-selectable
+    
+      [(ngModel)]="czoneport"
+      [items]="czoneports"
+      itemValueField="name"
+      itemTextField="name"
+      [canSearch]="true"
+      (onChange)="czoneportChange($event)">
+    </ionic-selectable>
+  </ion-item>
+  <!-- <ion-item>
+    <ion-label>P Zone</ion-label>
+    <ionic-selectable
+    
+      [(ngModel)]="port.name"
+      [items]="pzoneports"
+      itemValueField="name"
+      itemTextField="name"
+      [canSearch]="true"
+      (onChange)="portChange($event)">
+    </ionic-selectable>
+  </ion-item> -->
+  <ion-item>
+    <ion-label>Plant</ion-label>
+    <ionic-selectable
+    
+      [(ngModel)]="plantport"
+      [items]="plantports"
+      itemValueField="name"
+      itemTextField="name"
+      [canSearch]="true"
+      (onChange)="plantportChange($event)">
+    </ionic-selectable>
+  </ion-item>
+  <ion-card-content fullscreen  id="map2" style="position: relative;height: 300px; outline: none;" >
+  </ion-card-content>
+  <!-- <ion-item>
+    <ion-label>Asset</ion-label>
+    <ion-select [(ngModel)]="thingselected" [compareWith]="compareFn">
+      <ion-option *ngFor="let employee of livedata" [value]="livedata.devicename"></ion-option>
+    </ion-select>
+  </ion-item> -->
+  <div class="transaction_div">
+    <div class="transaction_header">
+      <p class="header_lbl">View all Transactions</p>
+      <ion-segment [(ngModel)]="transaction">
+        <ion-segment-button value="all">
+          <ion-label>All</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="moin">
+          <ion-label>Money In</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="moout">
+          <ion-label>Money Out</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+    <div [ngSwitch]="transaction" class="ion-margin-horizontal transaction_data">
+
+      <div *ngSwitchCase="'all'">
+        <div class="data_div">
+          <p class="price_p">
+            <ion-icon src="../../../assets/image/up_arrow.svg"></ion-icon> $500
+          </p>
+          <p class="credit_p">Amount Credited <span class="ion-float-right">26,Dec 2019</span></p>
+        </div>
+      </div>
+
+      <div *ngSwitchCase="'moin'">
+        <div class="data_div">
+          <p class="price_p">
+            <ion-icon src="../../../assets/image/up_arrow.svg"></ion-icon> $500
+          </p>
+          <p class="credit_p">Amount Credited <span class="ion-float-right">26,Dec 2019</span></p>
+        </div>
+      </div>
+
+      <div *ngSwitchCase="'moout'">
+        <p class="no_trans">No transaction available</p>
+      </div>
+    </div>
+  </div>
+  <!-- <ion-button (click)="single_notification()">
+    Single Notification
+  </ion-button>
+  
+  <ion-button (click)="multi_notification()">
+    Multi Notifcations
+  </ion-button>
+  
+  <ion-button (click)="delayed_notification()">
+    Delayed Notification
+  </ion-button> -->
+</ion-content>

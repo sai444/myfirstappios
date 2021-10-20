@@ -1,0 +1,75 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>
+      single delivery
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <agm-map [styles]="styles" [latitude]="Centerlat" [longitude]="Centerlng" [disableDefaultUI]="true">
+    <agm-direction [origin]="origin" [destination]="destination" [renderOptions]="renderOptions"
+      [markerOptions]="markerOptions">
+    </agm-direction>
+    <agm-direction [origin]="secondorigin" [destination]="seconddestination" [renderOptions]="renderOptions"
+      [markerOptions]="Options">
+    </agm-direction>
+  </agm-map>
+  <div class="vehicle_div">
+    <ion-row class="vehicle_row">
+      <ion-col [ngStyle]="{'opacity':scooter == 1 ? '1' : '0.5'} " (click)="scooter=1;cargo=0;mini=0">
+        <img src="../../../assets/image_svg/scooter_img.svg">
+        <p class="vehicle">Scooter</p>
+        <p class="price">$40.00 <ion-icon src="../../../assets/image/info_icon.svg" *ngIf="scooter"
+            (click)="fareDetail()"></ion-icon>
+        </p>
+      </ion-col>
+      <ion-col [ngStyle]="{'opacity':cargo == 1 ? '1' : '0.5'} " (click)="scooter=0;cargo=1;mini=0">
+        <img src="../../../assets/image_svg/cargo_car.svg">
+        <p class="vehicle">Cargo Car</p>
+        <p class="price">$50.00 <ion-icon src="../../../assets/image/info_icon.svg" *ngIf="cargo"
+            (click)="fareDetail()"></ion-icon>
+        </p>
+      </ion-col>
+      <ion-col [ngStyle]="{'opacity':mini == 1 ? '1' : '0.5'} " (click)="scooter=0;cargo=0;mini=1">
+        <img src="../../../assets/image_svg/mini_truck.svg">
+        <p class="vehicle">Mini Truck</p>
+        <p class="price">$80.00 <ion-icon src="../../../assets/image/info_icon.svg" *ngIf="mini" (click)="fareDetail()">
+          </ion-icon>
+        </p>
+      </ion-col>
+    </ion-row>
+    <div class="payment_row ion-margin-horizontal">
+
+      <div class="contain_div">
+        <ion-icon src="../../../assets/image_svg/cash.svg"></ion-icon>
+        <span>Cash</span>
+      </div>
+      <div class="contain_div" (click)="cardDetail()">
+        <ion-icon src="../../../assets/image_svg/card.svg"></ion-icon>
+        <span>Card</span>
+      </div>
+      <div class="contain_div" (click)="couponDetail()">
+        <ion-icon src="../../../assets/image_svg/coupon.svg"></ion-icon>
+        <span>Coupon</span>
+      </div>
+      <div class="contain_div">
+        <ion-icon src="../../../assets/image_svg/calender.svg"></ion-icon>
+        <span>Date</span>
+
+      </div>
+
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-button class="main_btn" expand="full" (click)="deliveryDetail()">
+    Next
+  </ion-button>
+</ion-footer>

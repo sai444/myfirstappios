@@ -1,0 +1,194 @@
+ion-content {
+  .main_lbl {
+    font-size: 16px;
+    font-family: "nunito_sb";
+    color: var(--black);
+    padding-left: 16px;
+  }
+  .sender_div {
+    display: flex;
+    padding: 15px 10px;
+    height: 95px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.16);
+    img {
+      height: 65px;
+      width: 65px;
+      border: solid 3px var(--white);
+      box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+      border-radius: 5px;
+    }
+    .data_div {
+      padding-left: 10px;
+      width: 100%;
+      .name {
+        font-size: 18px;
+        color: var(--black);
+        font-family: "nunito_sb";
+        margin: 0;
+        span {
+          color: var(--my_theme);
+          font-size: 14px;
+        }
+      }
+      .num {
+        font-size: 14px;
+        color: var(--gray);
+        font-family: "nunito_sb";
+        margin-top: 4px;
+        margin-bottom: 2px;
+      }
+      ion-icon {
+        color: var(--my_theme);
+      }
+    }
+  }
+  .order_no {
+    font-size: 18px;
+    color: var(--black);
+    font-family: "nunito_sb";
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .delivery_info {
+    .div_lbl {
+      color: var(--my_theme);
+      margin-bottom: 10px;
+    }
+    .date_time_div {
+      display: flex;
+      justify-content: space-between;
+      .time_div {
+        width: 46%;
+        .date_lbl {
+          padding: 0;
+          margin-top: 5px;
+        }
+        .date_data {
+          font-size: 14px;
+          color: var(--gray);
+          font-family: "nunito_r";
+          margin-top: 5px;
+          margin-bottom: 0;
+          padding-bottom: 10px;
+          border-bottom: dotted;
+          border-bottom-width: 1px;
+          border-bottom-color: var(--lht_gray);
+          ion-icon {
+            margin-right: 6px;
+          }
+        }
+      }
+    }
+  }
+  .sender_location {
+    border-radius: 5px;
+    border: solid 1px var(--my_theme);
+    margin: 20px 16px;
+    padding: 10px 16px;
+    .sender_lbl {
+      font-size: 14px;
+      font-family: "nunito_r";
+      color: var(--gray);
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+    .sender_address {
+      margin-top: 0;
+      font-size: 16px;
+      font-family: "nunito_sb";
+      color: var(--black);
+      margin-bottom: 4px;
+    }
+  }
+  .recipient_div {
+    margin-bottom: 16px;
+
+    .recipient_data {
+      font-size: 14px;
+      color: var(--gray);
+      font-family: "nunito_r";
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    .drop_location {
+      margin-bottom: 10px;
+    }
+    .item_lbl {
+      margin-top: 10px;
+      margin-bottom: 3px;
+      font-size: 16px;
+      color: var(--black);
+      font-family: "nunito_sb";
+    }
+  }
+  .Recipient_header {
+    height: 45px;
+    background-color: var(--item_back);
+    display: flex;
+    align-items: center;
+  }
+  .bill_detail {
+    height: 181px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.16);
+    padding-top: 15px;
+    margin: 16px;
+    .bill_p {
+      font-size: 16px;
+      color: var(--black);
+      font-family: "nunito_sb";
+      margin-top: 0px;
+      margin-bottom: 5px;
+      padding: 0px 13px;
+    }
+    .discount {
+      padding-bottom: 15px;
+      border-bottom: dotted;
+      border-bottom-width: 1px;
+      border-bottom-color: var(--lht_gray);
+    }
+    .total {
+      color: var(--my_theme);
+      padding-top: 5px;
+    }
+  }
+  .review_div {
+    margin-top: 20px;
+    padding: 20px 16px 10px 16px;
+    text-align: center;
+    ion-icon {
+      height: 23px;
+      width: 25px;
+      color: var(--my_theme);
+    }
+    .experience {
+      font-size: 16px;
+      color: var(--my_theme);
+      font-family: "nunito_r";
+      border-radius: 5px;
+      border: solid 1px var(--my_theme);
+      margin: 10px 0px;
+      --placeholder-opacity: 1;
+    }
+  }
+  .payment_div {
+    display: flex;
+    padding-bottom: 10px;
+    border-bottom: dotted;
+    border-bottom-color: var(--lht_gray);
+    border-bottom-width: 1px;
+    ion-radio {
+      width: 12px;
+      height: 12px;
+      margin-right: 10px;
+      --color-checked: var(--my_theme);
+    }
+    .pay_lbl {
+      font-size: 14px;
+      font-family: "nunito_r";
+      color: var(--gray);
+      margin: auto;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>on going job</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_div ion-margin-horizontal">
+    <p class="main_lbl">Booking {{data?.order_num}}</p>
+    <div class="booking_div">
+      <div class="info_div">
+        <img [src]="data?.img">
+        <div class="data_div">
+          <h3 class="name">{{data?.name}}</h3>
+          <p class="address">{{data?.address}}</p>
+          <ion-icon [name]="data?.rate >= 1? 'star':'star-outline'"></ion-icon>
+          <ion-icon [name]="data?.rate >= 2? 'star':'star-outline'"></ion-icon>
+          <ion-icon [name]="data?.rate >= 3? 'star':'star-outline'"></ion-icon>
+          <ion-icon [name]="data?.rate >= 4? 'star':'star-outline'"></ion-icon>
+          <ion-icon [name]="data?.rate >= 5? 'star':'star-outline'"></ion-icon>
+        </div>
+      </div>
+      <div class="pickup_div">
+        <div class="date_div">
+          <p class="main_lbl date_lbl">Pickup Date</p>
+          <p class="date">
+            <ion-icon src="../../../assets/image_svg/cal_icon.svg"></ion-icon> {{data?.pickdate}}
+          </p>
+        </div>
+        <div class="date_div">
+          <p class="main_lbl date_lbl">Delivery Time</p>
+          <p class="date">
+            <ion-icon src="../../../assets/image_svg/watch_icon.svg"></ion-icon> {{data?.delivery_time}}
+          </p>
+        </div>
+      </div>
+      <div class="btn_div">
+        <ion-button class="live_btn" (click)="liveTrack()">
+          Live Track
+        </ion-button>
+        <ion-button class="view_btn" (click)="viewDetail()">
+          View Detail
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

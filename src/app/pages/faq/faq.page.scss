@@ -1,0 +1,28 @@
+ion-content {
+  .main_div {
+    padding-top: 10px;
+  }
+  ion-item {
+    --padding-start: 0;
+    border-bottom: dotted;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--lht_gray);
+    --inner-padding-end: 0;
+    .question_lbl {
+      font-size: 16px;
+      color: var(--gray);
+      font-family: "nunito_sb";
+      white-space: normal;
+      .data_p {
+        font-size: 14px;
+        margin-top: 5px;
+        font-family: "nunito_r";
+        color: var(--lht_gray);
+      }
+    }
+    ion-icon {
+      align-self: baseline;
+      margin-left: 10px;
+    }
+  }
+}

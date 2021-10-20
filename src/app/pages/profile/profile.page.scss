@@ -1,0 +1,111 @@
+ion-header {
+  ion-toolbar {
+    box-shadow: none;
+    z-index: 0;
+  }
+  .img_div {
+    text-align: center;
+    .hexagon {
+      height: 100px;
+      width: 100px;
+
+      margin: auto;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: solid 3px var(--my_theme);
+      }
+    }
+    .name {
+      font-size: 20px;
+      color: var(--my_theme);
+      font-family: "nunito_sb";
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+    .number {
+      font-size: 14px;
+      color: var(--lht_gray);
+      font-family: "nunito_sb";
+      margin: 0;
+    }
+  }
+}
+
+ion-content {
+  .info_div {
+    margin-bottom: 20px;
+  }
+  .info_item {
+    border-bottom: dotted;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--lht_gray);
+    --padding-start: 0;
+    ion-label {
+      font-size: 16px;
+      color: var(--black);
+      font-family: "nunito_sb";
+      margin-bottom: 0;
+    }
+    ion-input {
+      font-size: 14px;
+      font-family: "nunito_r";
+      color: var(--gray);
+    }
+  }
+  .password_header {
+    background-color: var(--item_back);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    .change_lbl {
+      padding: 0px 16px;
+      font-size: 18px;
+      color: var(--black);
+      font-family: "nunito_sb";
+      width: 100%;
+      margin: 0;
+      .edit_btn {
+        height: 23px;
+      }
+    }
+  }
+  .password_div {
+    margin-bottom: 16px;
+  }
+}
+// #hexagon {
+//   width: 100px;
+//   height: 55px;
+//   background: red;
+//   position: relative;
+//   margin: auto;
+// }
+// #hexagon:before {
+//   content: "";
+//   position: absolute;
+//   top: -25px;
+//   left: 0;
+//   width: 0;
+//   height: 0;
+//   border-left: 50px solid transparent;
+//   border-right: 50px solid transparent;
+//   border-bottom: 25px solid red;
+// }
+// #hexagon:after {
+//   content: "";
+//   position: absolute;
+//   bottom: -25px;
+//   left: 0;
+//   width: 0;
+//   height: 0;
+//   border-left: 50px solid transparent;
+//   border-right: 50px solid transparent;
+//   border-top: 25px solid red;
+// }
+#map {
+  height: 100vh;
+  width: 10h;
+  margin: auto;
+}

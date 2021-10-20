@@ -1,0 +1,37 @@
+ion-content {
+  .car_img_div {
+    margin-top: 30px;
+    text-align: center;
+    .name {
+      font-size: 20px;
+      color: var(--black);
+      font-family: "nunito_sb";
+    }
+    .detail {
+      font-size: 15px;
+      color: var(--gray);
+      font-family: "nunito_sb";
+      margin-top: 10px;
+    }
+  }
+  .data_div {
+    padding-top: 30px;
+    .info_lbl {
+      font-size: 16px;
+      font-family: "nunito_sb";
+      color: var(--black);
+      margin-top: 0px;
+      margin-bottom: 5px;
+    }
+    .capacity {
+      padding-bottom: 10px;
+      border-bottom: solid;
+      border-bottom-color: var(--lightgray);
+      border-bottom-width: 1px;
+      margin-bottom: 10px;
+    }
+    .total {
+      color: var(--my_theme);
+    }
+  }
+}

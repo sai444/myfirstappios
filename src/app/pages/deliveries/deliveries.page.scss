@@ -1,0 +1,134 @@
+ion-header {
+  .segment_header {
+    height: 60px;
+    // border-radius: 0px 0px 20px 20px;
+    margin-top: -18px;
+    display: flex;
+    justify-content: space-between;
+    .left_col {
+      border-radius: 0px 0px 0px 20px;
+    }
+    .right_col {
+      border-radius: 0px 0px 20px 0px;
+    }
+    .segment_div {
+      width: 49.6%;
+      height: 100%;
+      background-color: var(--my_theme);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--op_white);
+      padding-top: 14px;
+      font-size: 16px;
+      font-family: "nunito_sb";
+    }
+    .active {
+      color: var(--white) !important;
+    }
+  }
+}
+
+ion-content {
+  .main_lbl {
+    padding-left: 16px;
+    font-size: 16px;
+    color: var(--black);
+    font-family: "nunito_sb";
+  }
+  .card_div {
+    height: 248px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.16);
+    position: relative;
+    margin-bottom: 10px;
+    .booking_div {
+      padding: 10px 15px;
+      display: flex;
+      img {
+        height: 65px;
+        width: 65px;
+        border: solid 3px var(--white);
+        box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+      }
+      .data_div {
+        margin-left: 11px;
+        .name {
+          margin-top: 0px;
+          margin-bottom: 5px;
+          font-size: 18px;
+          color: var(--black);
+          font-family: "nunito_sb";
+        }
+        .address {
+          font-size: 16px;
+          color: var(--gray);
+          font-family: "nunito_sb";
+          margin-top: 0px;
+          margin-bottom: 3px;
+        }
+        ion-icon {
+          color: var(--my_theme);
+        }
+      }
+    }
+    .pickup_div {
+      display: flex;
+      justify-content: space-between;
+      padding: 0px 16px;
+      .date_div {
+        width: 45%;
+        border-bottom: dotted;
+        border-bottom-width: 1px;
+        border-bottom-color: var(--lht_gray);
+        .date_lbl {
+          margin-top: 5px;
+          margin-bottom: 0;
+        }
+        .date {
+          font-size: 14px;
+          color: var(--gray);
+          font-family: "nunito_r";
+          margin-top: 10px;
+          margin-bottom: 10px;
+          ion-icon {
+            margin-right: 3px;
+          }
+        }
+      }
+    }
+    .finish_btn {
+      height: 40px;
+      text-transform: capitalize;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      --border-radius: 0px 0px 5px 5px;
+      font-size: 16px;
+    }
+    .btn_div {
+      display: flex;
+      justify-content: space-between;
+      bottom: 0;
+      width: 100%;
+      position: absolute;
+      ion-button {
+        height: 40px;
+        --background: var(--my_theme);
+        --color: var(--white);
+        width: 49.5%;
+        margin: 0;
+        letter-spacing: 0;
+        text-transform: capitalize;
+        font-size: 16px;
+        font-family: "nunito_sb";
+      }
+      .reschedule_btn {
+        --border-radius: 0px 0px 0px 5px;
+      }
+      .cancel_btn {
+        --border-radius: 0px 0px 5px 0px;
+      }
+    }
+  }
+}

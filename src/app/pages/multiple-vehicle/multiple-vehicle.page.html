@@ -1,0 +1,55 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Multi Delivery</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <agm-map [styles]="styles" [latitude]="Centerlat" [longitude]="Centerlng" [disableDefaultUI]="true">
+    <agm-direction [origin]="origin" [destination]="destination" [renderOptions]="renderOptions"
+      [markerOptions]="markerOptions">
+    </agm-direction>
+  </agm-map>
+  <div class="location-section">
+    <ion-item mode="md" lines="none" class="pickup-section">
+      <ion-icon slot="start" src="../../../assets/image_svg/pickup_icon.svg" class="first-icon"></ion-icon>
+      <ion-label mode="md" position="stacked" class="input-info-label">Pickup Location</ion-label>
+      <ion-input mode="md" value="Claro Works, Claro Road, Herrogate" readonly></ion-input>
+    </ion-item>
+  </div>
+  <div class="vehicle_div">
+    <ion-row class="vehicle_row">
+      <ion-col [ngStyle]="{opacity:scooter==1 ? '1':'0.5'}" (click)="scooter=1;mini=0;cargo=0">
+        <img src="../../../assets/image_svg/scooter_img.svg">
+        <p class="vehicle">Scooter</p>
+      </ion-col>
+      <ion-col [ngStyle]="{opacity:cargo==1 ? '1':'0.5'}" (click)="scooter=0;mini=0;cargo=1">
+        <img src="../../../assets/image_svg/cargo_car.svg">
+        <p class="vehicle">Cargo Car</p>
+      </ion-col>
+      <ion-col [ngStyle]="{opacity:mini==1 ? '1':'0.5'}" (click)="scooter=0;mini=1;cargo=0">
+        <img src="../../../assets/image_svg/mini_truck.svg">
+        <p class="vehicle">Mini Truck</p>
+      </ion-col>
+    </ion-row>
+    <div class="segment_div">
+      <div class="data_div select_div">
+        Vehicle type
+        <span class="arrow"></span>
+      </div>
+      <div class="data_div">
+        Route
+      </div>
+      <div class="data_div">
+        Price
+      </div>
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-button expand="full main_btn" (click)="selectRoute()">
+    Next
+  </ion-button>
+</ion-footer>

@@ -1,0 +1,59 @@
+ion-header {
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.16);
+  border-radius: 0px 0px 20px 20px;
+
+  ion-toolbar {
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .header_btn {
+    display: flex;
+    .segment_btn {
+      --color: var(--gray);
+      margin: auto;
+      text-transform: capitalize;
+      font-size: 16px;
+      font-family: "nunito_sb";
+    }
+    .active {
+      --color: var(--my_theme) !important;
+    }
+  }
+}
+
+ion-content {
+  .all_contain {
+    margin-top: 20px;
+    .card_div {
+      display: flex;
+      margin-bottom: 15px;
+      .data_div {
+        padding-left: 10px;
+      }
+      img {
+        height: 75px;
+        width: 75px;
+        border-radius: 5px;
+      }
+      .tittle {
+        font-size: 14px;
+        color: var(--gray);
+        font-family: "nunito_sb";
+        margin: 0;
+        line-height: 17px;
+      }
+      .time {
+        font-size: 11px;
+        color: var(--gray);
+        font-family: "nunito_r";
+        margin: 3px 0px;
+      }
+      .about {
+        font-size: 12px;
+        font-family: "nunito_r";
+        color: var(--lht_gray);
+        margin: 0;
+      }
+    }
+  }
+}

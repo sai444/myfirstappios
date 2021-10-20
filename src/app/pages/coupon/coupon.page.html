@@ -1,0 +1,52 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="home" icon="chevron-back-outline" text="" mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      About
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="ion-margin-horizontal main_div">
+    <p class="main_lbl">Release</p>
+    <div class="coupon_div">
+      <!-- <div class="coupon_info">
+        <ion-item lines="none">
+          <ion-icon slot="start" src="../../../assets/image_svg/cupon_icon.svg"></ion-icon>
+          <ion-input placeholder="Enter coupon code"></ion-input>
+        </ion-item>
+      </div>
+     
+      <ion-button class="apply_btn" (click)="applyCoupon()">
+        Apply
+      </ion-button> -->
+    </div>
+    <!-- <p class="info_lbl">
+      Release 
+    </p> -->
+    <div class="coupon_div" *ngFor="let item of coupon">
+      <div class="coupon_info">
+        <p class="detail">{{item?.detail}}</p>
+      </div>
+      <div class="apply_div">
+        <div class="discount_div">
+          <div class="discount">
+            {{item?.discount}}
+          </div>
+
+          <p class="code">{{item?.code}}</p>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+</ion-content>

@@ -1,0 +1,136 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-menu-button>
+
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="home" icon="chevron-back-outline" text="" mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>receipt</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_div">
+    <p class="main_lbl">Sender</p>
+    <div class="sender_div ion-margin-horizontal">
+      <img [src]="data?.img">
+      <div class="data_div">
+        <h3 class="name">{{data?.name}} <span class="ion-float-right">{{data?.price}}</span></h3>
+        <p class="num">{{data?.num}}</p>
+        <ion-icon [name]="data?.rate >=1 ? 'star':'star-outline'"></ion-icon>
+        <ion-icon [name]="data?.rate >=2 ? 'star':'star-outline'"></ion-icon>
+        <ion-icon [name]="data?.rate >=3 ? 'star':'star-outline'"></ion-icon>
+        <ion-icon [name]="data?.rate >=4 ? 'star':'star-outline'"></ion-icon>
+        <ion-icon [name]="data?.rate >=5 ? 'star':'star-outline'"></ion-icon>
+      </div>
+    </div>
+    <p class="order_no">Delivery {{data?.oreder_no}}</p>
+    <div class="delivery_info ">
+      <p class="main_lbl div_lbl">Delivery Request Date</p>
+      <div class="date_time_div ion-margin-horizontal">
+        <div class="time_div">
+          <h3 class="main_lbl date_lbl">Pickup Date</h3>
+          <p class="date_data">
+            <ion-icon src="../../../assets/image_svg/cal_icon.svg">
+            </ion-icon> {{data?.pickup_date}}
+          </p>
+        </div>
+        <div class="time_div">
+          <h3 class="main_lbl date_lbl">Delivery Time</h3>
+          <p class="date_data">
+
+            <ion-icon src="../../../assets/image_svg/watch_icon.svg">
+            </ion-icon> {{data?.delivery_time}}
+          </p>
+        </div>
+      </div>
+      <div class="sender_location">
+        <h3 class="sender_lbl">Sender Location</h3>
+        <p class="sender_address">{{data?.sender_address}}</p>
+      </div>
+    </div>
+    <div class="recipient_div" *ngFor="let item of data?.recipient">
+      <div class="Recipient_header">
+        <p class="main_lbl">Recipient</p>
+      </div>
+      <ion-item>
+        <ion-label class="recipient_data">{{item?.name}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label class="recipient_data">{{item?.num}}</ion-label>
+      </ion-item>
+      <div class="sender_location drop_location">
+        <h3 class="sender_lbl">Drop Location</h3>
+        <p class="sender_address">{{item?.address}}</p>
+      </div>
+
+      <ion-item>
+        <ion-label position="stacked" mode="ios" class="item_lbl">Package Type</ion-label>
+        <p class="recipient_data">{{item?.type}}</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked" mode="ios" class="item_lbl">Delivery Instruction</ion-label>
+        <p class="recipient_data">{{item?.instruction}}</p>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked" mode="ios" class="item_lbl">Delivery Status</ion-label>
+        <p class="recipient_data">{{item?.status}}</p>
+      </ion-item>
+    </div>
+    <div class="Recipient_header">
+      <p class="main_lbl">Bill Detail</p>
+    </div>
+    <div class="bill_detail">
+      <p class="bill_p">Fare <span class="ion-float-right">${{data?.fare}}</span></p>
+      <p class="bill_p">Distance <span class="ion-float-right">${{data?.distance}}</span></p>
+      <p class="bill_p">Time (12.23 Min)<span class="ion-float-right">{{data?.time}}</span></p>
+      <p class="bill_p discount">Discount <span class="ion-float-right">-${{data?.discount}}</span></p>
+      <p class="bill_p total">Total <span class="ion-float-right">${{data?.total}}</span></p>
+    </div>
+    <p class="main_lbl">Select Payment Type</p>
+    <ion-radio-group>
+      <div class="payment_div ion-margin-horizontal">
+
+
+        <ion-label class="pay_lbl">
+          <ion-radio value="paypal"></ion-radio>Paypal
+        </ion-label>
+
+        <ion-label class="pay_lbl">
+          <ion-radio value="strip"></ion-radio>Strip
+        </ion-label>
+
+        <ion-label class="pay_lbl">
+          <ion-radio value="razorpay"></ion-radio>Razorpay
+        </ion-label>
+
+        <ion-label class="pay_lbl">
+          <ion-radio value="cash"></ion-radio>Cash
+        </ion-label>
+
+      </div>
+    </ion-radio-group>
+    <div class="review_div">
+      <ion-icon [name]="reviewRate >= 1 ? 'star':'star-outline'" (click)="reviewRate=1;"></ion-icon>
+      <ion-icon [name]="reviewRate >= 2 ? 'star':'star-outline'" (click)="reviewRate=2;"></ion-icon>
+      <ion-icon [name]="reviewRate >= 3 ? 'star':'star-outline'" (click)="reviewRate=3;"></ion-icon>
+      <ion-icon [name]="reviewRate >= 4 ? 'star':'star-outline'" (click)="reviewRate=4;"></ion-icon>
+      <ion-icon [name]="reviewRate >= 5 ? 'star':'star-outline'" (click)="reviewRate=5;"></ion-icon>
+
+
+      <ion-input placeholder="Provide your feedback" class="experience">
+
+      </ion-input>
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-button class="main_btn" expand="full" (click)="presentAlert()">
+    Rate
+  </ion-button>
+</ion-footer>

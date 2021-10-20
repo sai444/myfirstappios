@@ -1,0 +1,25 @@
+ion-content {
+  .main_div {
+    margin-top: 20px;
+    img {
+      height: 180px;
+      width: 100%;
+      border: 5px;
+    }
+    .tittle {
+      font-size: 20px;
+      font-family: "nunito_sb";
+      color: var(--black);
+    }
+    .time {
+      font-size: 12px;
+      font-family: "nunito_sb";
+      color: var(--gray);
+    }
+    .detail {
+      font-size: 14px;
+      font-family: "nunito_r";
+      color: var(--gray);
+    }
+  }
+}

@@ -1,0 +1,66 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>notification</ion-title>
+  </ion-toolbar>
+  <div class="header_btn">
+    <ion-button class="transparent_btn segment_btn" (click)="chageTab('all')"
+      [ngClass]="{ active: activeTab == 'all' }">
+      All
+    </ion-button>
+    <ion-button class="transparent_btn segment_btn" (click)="chageTab('app')"
+      [ngClass]="{ active: activeTab == 'app' }">
+      Notification
+    </ion-button>
+    <!-- <ion-button class="transparent_btn segment_btn" (click)="chageTab('news')"
+      [ngClass]="{ active: activeTab == 'news' }">
+      News
+    </ion-button> -->
+  </div>
+</ion-header>
+
+<ion-content>
+  <ng-container [ngSwitch]="activeTab">
+    <ng-container *ngSwitchCase="'all'">
+
+      <div class="all_contain ion-margin-horizontal">
+        <div class="card_div" *ngFor="let item of data?.all" (click)="notificationDetail()">
+          <img [src]="item?.img">
+          <div class="data_div">
+            <p class="tittle">{{item?.tittle}}</p>
+            <p class="time">{{item?.time}}</p>
+            <p class="about">{{item?.about | slice:0:75}} <span *ngIf="item.about.length >75 ">...</span></p>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngSwitchCase="'app'">
+
+      <div class="all_contain ion-margin-horizontal">
+        <div class="card_div" *ngFor="let item of data?.app" (click)="notificationDetail()">
+          <img [src]="item?.img">
+          <div class="data_div">
+            <p class="tittle">{{item?.tittle}}</p>
+            <p class="time">{{item?.time}}</p>
+            <p class="about">{{item?.about | slice:0:75}} <span *ngIf="item.about.length >75 ">...</span></p>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngSwitchCase="'news'">
+      <div class="all_contain ion-margin-horizontal">
+        <div class="card_div" *ngFor="let item of data?.news" (click)="notificationDetail()">
+          <img [src]="item?.img">
+          <div class="data_div">
+            <p class="tittle">{{item?.tittle}}</p>
+            <p class="time">{{item?.time}}</p>
+            <p class="about">{{item?.about | slice:0:75}} <span *ngIf="item.about.length >75 ">...</span></p>
+          </div>
+        </div>
+      </div>
+
+    </ng-container>
+  </ng-container>
+</ion-content>

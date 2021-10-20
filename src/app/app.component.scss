@@ -1,0 +1,117 @@
+ion-menu {
+  ion-content {
+    --background: var(--ion-item-background, var(--ion-background-color, #fff));
+  }
+}
+
+ion-menu.md {
+  ion-content {
+    --padding-start: 8px;
+    --padding-end: 8px;
+    --padding-top: 20px;
+    --padding-bottom: 20px;
+  }
+
+  ion-list {
+    padding: 20px 0;
+  }
+
+  ion-item {
+    --padding-start: 10px;
+    --padding-end: 10px;
+    border-radius: 4px;
+
+    &.selected {
+      // --background: rgba(var(--ion-color-primary-rgb), 0.14);
+      --color: var(--my_theme);
+    }
+    ion-label {
+      font-size: 18px;
+      //--color: var(--gray);
+      font-family: "nunito_sb";
+      text-align: center;
+    }
+  }
+}
+
+ion-menu.ios {
+  ion-content {
+    --padding-start: 16px;
+    --padding-end: 16px;
+    --padding-top: 20px;
+    --padding-bottom: 20px;
+  }
+
+  ion-list {
+    padding: 20px 0 0 0;
+  }
+
+  ion-item {
+    --padding-start: 0;
+    --min-height: 50px;
+
+    &.selected {
+      ion-icon {
+        color: var(--ion-color-primary);
+      }
+    }
+
+    ion-icon {
+      font-size: 24px;
+      color: #73849a;
+    }
+  }
+}
+ion-item.selected {
+  --color: var(--my_theme);
+}
+
+.header_div {
+  background-color: var(--my_theme);
+  height: 100px;
+  padding-left: 20px;
+  padding-top: 10px;
+  display: flex;
+  transform: rotate(0deg);
+  img {
+    height: 59px;
+    width: 59px;
+    border-radius: 50%;
+  }
+  .info_div {
+    padding-left: 16px;
+    width: 100%;
+
+    .name {
+      font-size: 18px;
+      color: var(--white);
+      font-family: "nunito_sb";
+      margin-bottom: 0;
+    }
+    .num {
+      font-size: 14px;
+      color: var(--white);
+      font-family: "nunito_r";
+      margin-top: 5px;
+      margin-bottom: 0;
+    }
+    .edit_btn {
+      margin-right: 10px;
+      margin-bottom: 10px;
+      height: 22px;
+    }
+  }
+}
+
+ion-footer {
+  .footer_div {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    ion-label {
+      font-size: 18px;
+      //--color: var(--gray);
+      font-family: "nunito_sb";
+    }
+  }
+}

@@ -1,0 +1,64 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="home" icon="chevron-back-outline" text="" mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Card Detail
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-margin-horizontal">
+    <p class="main_lbl">Card <ion-button class="transparent_btn ion-float-right" mode="md">Add Card</ion-button>
+    </p>
+    <ion-radio-group>
+      <ion-item class="select_card" mode="md" lines="none">
+        <ion-label class="card_detail_text" mode="md">XXXX XXXX XXXX XX89</ion-label>
+        <ion-radio slot="end" value="card"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+
+    <ion-label class="card_label" mode="md">
+      CARD NUMBER
+    </ion-label>
+    <ion-item lines="none" class="detail_item" mode="md">
+      <ion-input value="4319  5312  0215  1289" class="card_detail_text">
+      </ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col class="ion-no-padding" size="6">
+        <ion-label class="card_label" mode="md">
+          EXPRIRATION DATE
+        </ion-label>
+        <ion-item lines="none" class="detail_item" mode="md">
+          <ion-input value="09 / 22" class="card_detail_text">
+          </ion-input>
+
+        </ion-item>
+      </ion-col>
+
+      <ion-col class="ion-no-padding" size="5" offset="1">
+        <ion-label class="card_label" mode="md">
+          CVV
+        </ion-label>
+        <ion-item lines="none" class="detail_item" mode="md">
+          <ion-input value="****" class="card_detail_text">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-label class="card_label" mode="md">
+      CARD HOLDER'S NAME
+    </ion-label>
+    <ion-item lines="none" class="detail_item" mode="md">
+      <ion-input value="Randy Betancourt" class="card_detail_text">
+      </ion-input>
+    </ion-item>
+    <ion-button class="main_btn" expand="block" mode="md"> Add Card</ion-button>
+  </div>
+</ion-content>

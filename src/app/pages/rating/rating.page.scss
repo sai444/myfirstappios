@@ -1,0 +1,148 @@
+ion-content {
+  .total_fare_div {
+    padding-top: 20px;
+    text-align: center;
+    .outer_circle {
+      height: 90px;
+      width: 90px;
+      border-radius: 50%;
+      background-color: var(--my_theme);
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .inner_circle {
+        height: 84px;
+        width: 84px;
+        border-radius: 50%;
+        background-color: var(--my_theme);
+        border: solid 2px var(--white);
+        font-size: 25px;
+        font-family: "nunito_sb";
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .main_lbl {
+      font-size: 25px;
+      font-family: "nunito_b";
+      color: var(--my_theme);
+      margin-top: 10px;
+      margin-bottom: 0px;
+    }
+  }
+
+  .info_lbl {
+    font-size: 16px;
+    font-family: "nunito_sb";
+    color: var(--black);
+    margin-bottom: 0px;
+  }
+  .data_lbl {
+    font-size: 14px;
+    color: var(--gray);
+    font-family: "nunito_r";
+    border-bottom: dotted;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--lht_gray);
+    padding-bottom: 10px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    ion-icon {
+      margin-right: 10px;
+    }
+  }
+  .pickup_col {
+    padding-right: 15px;
+  }
+  .delivery_col {
+    padding-left: 15px;
+  }
+  .delivery_detail {
+    height: 228px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.16);
+    .pickup_div {
+      display: flex;
+      padding-top: 14px;
+      padding-bottom: 5px;
+      border-bottom: dotted;
+      border-bottom-width: 1px;
+      border-bottom-color: var(--lht_gray);
+      .pickup_lbl {
+        font-size: 14px;
+        color: var(--gray);
+        font-family: "nunito_r";
+        margin-top: 0px;
+        margin-bottom: 5px;
+      }
+      .pickup_user {
+        font-size: 16px;
+        font-family: "nunito_sb";
+        color: var(--black);
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+      ion-icon {
+        margin: 10px 10px 0px 10px;
+      }
+    }
+    .drop_location {
+      padding-top: 10px;
+      border-bottom: none;
+      padding-bottom: 0px;
+    }
+  }
+  .bill_detail {
+    height: 181px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.16);
+    padding-top: 15px;
+    .bill_p {
+      font-size: 16px;
+      color: var(--black);
+      font-family: "nunito_sb";
+      margin-top: 0px;
+      margin-bottom: 5px;
+      padding: 0px 13px;
+    }
+    .discount {
+      padding-bottom: 15px;
+      border-bottom: dotted;
+      border-bottom-width: 1px;
+      border-bottom-color: var(--lht_gray);
+    }
+    .total {
+      color: var(--my_theme);
+      padding-top: 5px;
+    }
+  }
+  .div_lbl {
+    margin-bottom: 10px;
+    margin-top: 0px;
+  }
+  .review_div {
+    margin-top: 20px;
+    padding: 20px 16px 10px 16px;
+    text-align: center;
+    ion-icon {
+      height: 23px;
+      width: 25px;
+      color: var(--my_theme);
+    }
+    .experience {
+      //height: 40px;
+      font-size: 16px;
+      color: var(--my_theme);
+      font-family: "nunito_r";
+      border-radius: 5px;
+      border: solid 1px var(--my_theme);
+      margin: 10px 0px;
+      --placeholder-opacity: 1;
+    }
+  }
+}

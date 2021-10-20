@@ -1,0 +1,37 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <div class="header_div">
+          <!-- <img src="../assets/image/sender_img.svg"> -->
+          <div class="info_div">
+            <h3 class="name">{{username}}</h3>
+            <ion-label (click)="logout()">Login/Logout</ion-label>
+
+           
+            <!-- <ion-button class="ion-float-right transparent_btn edit_btn" (click)="editProfile()">
+              <ion-icon src="../assets/image/edit_icon.svg"></ion-icon>
+            </ion-button> -->
+
+          </div>
+        </div>
+        <ion-list id="inbox-list">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+            <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none"
+              detail="false" [class.selected]="selectedIndex == i">
+              <ion-label>{{ p.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+      <ion-footer class="ion-no-border">
+        <div class="footer_div">
+          <ion-label (click)="support()">Support</ion-label>
+          <ion-label (click)="logout()">Login/Logout</ion-label>
+        </div>
+
+      </ion-footer>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

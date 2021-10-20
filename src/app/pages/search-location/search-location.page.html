@@ -1,0 +1,55 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="home" icon="chevron-back-outline" text="" mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Single Delivery
+    </ion-title>
+  </ion-toolbar>
+  <div class="serchbar_div ion-margin-horizontal">
+    <ion-searchbar mode="md" clearIcon="string"></ion-searchbar>
+  </div>
+
+</ion-header>
+
+<ion-content>
+  <div class="ion-margin-horizontal favorite_location">
+
+    <p class="secation_lbl">Favorite Location</p>
+    <ion-item lines="full" class="favorite_location_item" mode="md">
+      <ion-icon src="../../../assets/image_svg/home_icon.svg" slot="start"></ion-icon>
+      <ion-label mode="md">
+        <h3 class="info_lbl">Home Place</h3>
+        <p class="address" (click)="addLocation()">Claro Works, Claro Road, Harrogate, London UK</p>
+      </ion-label>
+    </ion-item>
+    <ion-item lines="full" class="favorite_location_item" mode="md">
+      <ion-icon src="../../../assets/image_svg/work_icon.svg" slot="start"></ion-icon>
+      <ion-label mode="md">
+        <h3 class="info_lbl">Work Place</h3>
+        <p class="address">5 Ravenhurst Drive, Birmingham, London UK</p>
+      </ion-label>
+    </ion-item>
+    <ion-item mode="md" lines="full" class="favorite_location_item  location_item">
+      <ion-icon src="../../../assets/image_svg/pin-icon.svg" slot="start" class="pin_icon"></ion-icon>
+      <ion-label mode="md" class="location_lbl" (click)="addLocation()">
+        Set Location on map
+      </ion-label>
+    </ion-item>
+
+  </div>
+  <div class="location_header_div">
+    <p class="recent_lbl">Recent Location</p>
+  </div>
+  <div class="recent_location_div">
+    <ion-item mode="md" *ngFor="let item of recentLocation" lines="full" class="recent_item">
+      <ion-icon src="../../../assets/image_svg/gray_pin.svg" slot="start">
+      </ion-icon>
+      <ion-label class="recent_address">{{item}}</ion-label>
+    </ion-item>
+  </div>
+</ion-content>

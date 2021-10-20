@@ -1,0 +1,9 @@
+<ion-content>
+    <div class="main_div">
+        <div class="tittle_div">
+            <p class="reson">Select Reason</p>
+        </div>
+        <p *ngFor="let item of reason" class="reson" (click)="presentAlert()">{{item}}</p>
+
+    </div>
+</ion-content>

@@ -1,0 +1,67 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="home" icon="chevron-back-outline" text="" mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>delivery detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_div ion-margin-horizontal">
+    <form>
+      <ion-item class="input_item" mode="md" lines="none">
+        <ion-label position="stacked" class="input_lbl" mode="ios">Receiver Name</ion-label>
+        <ion-input value="Dennis Rivera"></ion-input>
+      </ion-item>
+      <ion-item class="input_item" mode="md" lines="none">
+        <ion-label position="stacked" class="input_lbl" mode="ios">Receiver Mobile</ion-label>
+        <ion-input value="+44 369 147 2589"></ion-input>
+      </ion-item>
+      <ion-item class="input_item" mode="md" lines="none">
+        <ion-label position="stacked" class="input_lbl" mode="ios">Pickup Instruction</ion-label>
+        <ion-input value="Pickup on time"></ion-input>
+      </ion-item>
+      <ion-item class="input_item" mode="md" lines="none">
+        <ion-label position="stacked" class="input_lbl" mode="ios">Delivery Instruction</ion-label>
+        <ion-input value="Drop on time"></ion-input>
+      </ion-item>
+      <ion-item class="input_item package_type_item" mode="md" lines="none">
+        <ion-icon [name]="isdetail ==0 ? 'chevron-down-outline' :'chevron-up-outline'" (click)="detail()">
+        </ion-icon>
+        <ion-label position="stacked" class="input_lbl" mode="ios">Package Type</ion-label>
+        <ion-input value="select package type"></ion-input>
+
+        <div class="detail_div" *ngIf="isdetail">
+          <div class="col_one">
+            <p class="ptype_lbl">Child Parcel</p>
+            <p class="ptype_lbl">Envelope</p>
+            <p class="ptype_lbl">Documents</p>
+            <p class="ptype_lbl">Electrical Item</p>
+          </div>
+          <div class="col_one">
+            <p class="ptype_lbl">Food Parcel</p>
+            <p class="ptype_lbl">Crate or Box</p>
+            <p class="ptype_lbl">Suitcases and Bags</p>
+            <p class="ptype_lbl">Electronic Items</p>
+          </div>
+        </div>
+      </ion-item>
+      <ion-item class="input_item" mode="md" lines="none">
+        <ion-label position="stacked" class="input_lbl" mode="ios">Package Detail</ion-label>
+        <ion-input value="package detail"></ion-input>
+      </ion-item>
+    </form>
+
+
+  </div>
+
+</ion-content>
+<ion-footer>
+  <ion-button expand="full" class="main_btn" (click)="acceptOrder()">
+    Deliver Now
+  </ion-button>
+</ion-footer>

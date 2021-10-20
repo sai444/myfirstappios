@@ -1,0 +1,92 @@
+<ion-content>
+  <div class="main_div ion-margin-horizontal">
+    <div class="logo_div">
+      <!-- <img src="../../../assets/image_svg/Logo.svg"> -->
+      <h3 class="logo_tittle">H - Tracker</h3>
+      <p class="page_tittle">Sign In</p>
+    </div>
+    <div class="data_div">
+      <div class="contaier-login">
+      <form class="form" [formGroup]="validations_form" (ngSubmit)="loginUser(validations_form.value)">
+        <ion-row>
+          <ion-col>
+        <ion-item>
+          <ion-label position="floating" color="primary">username</ion-label>
+          <ion-input type="text" formControlName="username"></ion-input>
+        </ion-item>
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.username">
+            <div class="error-message"
+              *ngIf="validations_form.get('username').hasError(validation.type) && (validations_form.get('username').dirty || validations_form.get('username').touched)">
+             
+
+              <ion-row>
+                <ion-col>
+                    <ion-label>
+                        <h3 style="color: aliceblue;"> {{ validation.message }}</h3>
+                    </ion-label>
+                </ion-col>
+            </ion-row>
+            </div>
+
+          </ng-container>
+        </div>
+    
+        <ion-item>
+          <ion-label position="floating" color="primary">Password</ion-label>
+          <!-- <ion-icon name="person" class="icon-login"></ion-icon> -->
+          <ion-input type="password" formControlName="password" class="form-controll" required></ion-input>
+        </ion-item>
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.password">
+            
+            <div 
+              *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
+              <!-- {{ validation.message }} -->
+              <ion-row>
+                <ion-col>
+                    <ion-label>
+                        <h3 style="color: aliceblue;"> {{ validation.message }}</h3>
+                    </ion-label>
+                </ion-col>
+            </ion-row>
+            </div>
+          </ng-container>
+        </div>
+    
+        <ion-button   type="submit" fill="solid" expand="full" class="submit-btn" type="submit" [disabled]="!validations_form.valid">Log In</ion-button>
+        <ion-row>
+          <ion-col>
+              <ion-label>
+                  <h3>{{errorMessage}}</h3>
+              </ion-label>
+          </ion-col>
+      </ion-row>
+        <label class="error-message" style="color: aliceblue;"> {{errorMessage}}</label>
+      </ion-col>
+    </ion-row>
+      </form>
+    </div>
+      <div class="or">
+        <h2 class="background"><span>or</span></h2>
+      </div>
+      <!-- <div class="social_btn_div">
+        <ion-button class="facbook social">
+          <ion-icon src="../../../assets/image_svg/facebook_icon.svg"></ion-icon>
+        </ion-button>
+
+        <ion-button class="google social">
+          <ion-icon src="../../../assets/image_svg/google_plus.svg"></ion-icon>
+        </ion-button>
+        <ion-button class="twitter social">
+          <ion-icon src="../../../assets/image_svg/twitter_icon.svg"></ion-icon>
+        </ion-button>
+      </div> -->
+      <div class="signup_div">
+        <span class="text">If you are new user? Contact Hitachi India Pvt Ltd</span>
+        <!-- <ion-button (click)="signup()" class="transparent_btn signup_btn">Sign up</ion-button> -->
+      </div>
+    </div>
+
+  </div>
+</ion-content>

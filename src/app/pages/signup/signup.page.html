@@ -1,0 +1,56 @@
+<ion-content>
+  <div class="main_div ion-margin-horizontal">
+    <div class="logo_div">
+      <img src="../../../assets/image_svg/Logo.svg">
+      <h3 class="logo_tittle">Delivery junction</h3>
+      <p class="page_tittle">Sign Up</p>
+    </div>
+    <div class="data_div">
+      <form>
+        <ion-item lines="none" class="data_item">
+          <ion-label position="stacked" class="info_label" mode="ios">Email</ion-label>
+          <ion-input required type="text" class="data_input" placeholder="dennislynch@gmail.com"></ion-input>
+        </ion-item>
+        <ion-item lines="none" class="data_item">
+          <ion-label position="stacked" class="info_label" mode="ios">Password</ion-label>
+          <ion-input required type="Password" class="data_input" placeholder="*  *  *  *  *  *"></ion-input>
+          <ion-button slot="end" class="transparent_btn password_btn">
+            <ion-icon src="../../../assets/image_svg/eye_icon.svg"></ion-icon>
+          </ion-button>
+        </ion-item>
+        <ion-item lines="none" class="data_item">
+          <ion-label position="stacked" class="info_label" mode="ios">Confirm Password</ion-label>
+          <ion-input required type="Password" class="data_input" placeholder="*  *  *  *  *  *"></ion-input>
+          <ion-button slot="end" class="transparent_btn password_btn">
+            <ion-icon src="../../../assets/image_svg/eye_icon.svg"></ion-icon>
+          </ion-button>
+        </ion-item>
+
+        <ion-button class="main_btn" mode="md" expand="full" shape="round" fill="solid" (click)="signIn()">
+          Sign up
+        </ion-button>
+
+      </form>
+      <div class="or">
+        <h2 class="background"><span>or</span></h2>
+      </div>
+      <div class="social_btn_div">
+        <ion-button class="facbook social">
+          <ion-icon src="../../../assets/image_svg/facebook_icon.svg"></ion-icon>
+        </ion-button>
+
+        <ion-button class="google social">
+          <ion-icon src="../../../assets/image_svg/google_plus.svg"></ion-icon>
+        </ion-button>
+        <ion-button class="twitter social">
+          <ion-icon src="../../../assets/image_svg/twitter_icon.svg"></ion-icon>
+        </ion-button>
+      </div>
+      <div class="signup_div">
+        <span class="text">Aleready have an account?</span>
+        <ion-button (click)="signIn()" class="transparent_btn signup_btn">Sign in</ion-button>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

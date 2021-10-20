@@ -1,0 +1,74 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Multi Delivery</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <agm-map [styles]="styles" [latitude]="Centerlat" [longitude]="Centerlng" [disableDefaultUI]="true">
+    <agm-direction [origin]="origin" [destination]="destination" [renderOptions]="renderOptions"
+      [markerOptions]="markerOptions">
+    </agm-direction>
+    <agm-direction [origin]="secondorigin" [destination]="seconddestination" [renderOptions]="renderOptions"
+      [markerOptions]="Options">
+    </agm-direction>
+    <agm-direction [origin]="thirdorigin" [destination]="thirddestination" [renderOptions]="renderOptions"
+      [markerOptions]="moptions">
+    </agm-direction>
+  </agm-map>
+  <div class="location-section">
+    <ion-item mode="md" lines="none" class="pickup-section">
+      <ion-icon slot="start" src="../../../assets/image_svg/pickup_icon.svg" class="first-icon"></ion-icon>
+      <ion-label mode="md" position="stacked" class="input-info-label">Pickup Location</ion-label>
+      <ion-input mode="md" value="Claro Works, Claro Road, Herrogate" readonly></ion-input>
+    </ion-item>
+  </div>
+  <div class="vehicle_div">
+    <div class="contain_div">
+      <ion-button class="transparent_btn add_btn ion-float-right" (click)="deliveryDetail()"> Add Location</ion-button>
+      <ion-item class="first_item" mode="md">
+        <ion-label>
+          <h3 class="info_lbl">Pickup Location</h3>
+          <p class="item_input">14 Eastfied Rd, Peterborough, London</p>
+        </ion-label>
+      </ion-item>
+      <ion-item mode="ios">
+        <ion-label>
+          <h3 class="info_lbl">Drop Location</h3>
+          <p class="item_input" (click)="deliveryDetail()">14 Eastfied Rd, Peterborough, London</p>
+        </ion-label>
+
+      </ion-item>
+      <ion-item mode="ios">
+
+        <ion-label>
+          <h3 class="info_lbl">Drop Location</h3>
+          <p class="item_input" (click)="deliveryDetail()">14 Eastfied Rd, Peterborough, London</p>
+        </ion-label>
+
+      </ion-item>
+      <div class="segment_div">
+        <div class="data_div ">
+          Vehicle type
+          <span class="arrow"></span>
+        </div>
+        <div class="data_div select_div">
+          Route
+        </div>
+        <div class="data_div">
+          Price
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-button expand="full main_btn" (click)="priceDetail()">
+    Next
+  </ion-button>
+</ion-footer>

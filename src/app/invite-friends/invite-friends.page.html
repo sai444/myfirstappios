@@ -1,0 +1,40 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-menu-button>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title>invite friends</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_div ion-margin-horizontal">
+    <div class="code_div">
+      <p class="code_detail">Invite your friend & we'll give $20 credit in your wallet once your refferred friend
+        completes the 1st delivery.</p>
+      <ion-item class="code_item" lines="none" mode="md">
+        <ion-label>
+          <h3 class="invite_lbl">Share your invite code</h3>
+          <p class="code">365 264</p>
+        </ion-label>
+      </ion-item>
+      <ion-button class="main_btn invite_btn" expand="block">
+        invite friends
+      </ion-button>
+    </div>
+    <div class="conatact_list">
+      <ion-searchbar mode="md" clearIcon="string" placeholder="Search Contacts.."></ion-searchbar>
+      <ion-item *ngFor="let item of contactList" lines="none">
+        <div class="font_div" slot="start">
+          {{item?.name | slice:0:1}}
+        </div>
+        <ion-label>
+          <h3 class="name"> {{item?.name}}</h3>
+          <p class="number">{{item?.number}}</p>
+        </ion-label>
+        <ion-checkbox slot="end" mode="ios"></ion-checkbox>
+      </ion-item>
+    </div>
+  </div>
+</ion-content>

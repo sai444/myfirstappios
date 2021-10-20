@@ -1,0 +1,98 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-menu-button>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon src="../../../assets/image/blue_edit.svg"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <div class="img_div">
+    <div class="hexagon">
+      <img
+        src="https://images.pexels.com/photos/1308881/pexels-photo-1308881.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+    </div>
+    <h3 class="name">Admin</h3>
+    <p class="number">+91 </p>
+  </div>
+</ion-header>
+
+<ion-content>
+  <div class="info_div ion-margin-horizontal">
+    <ion-item mode="md" class="info_item" lines="none">
+      <ion-label position="stacked" mode="ios">
+        Name
+      </ion-label>
+      <ion-input value="Admin">
+      </ion-input>
+    </ion-item>
+    <ion-item mode="md" class="info_item" lines="none">
+      <ion-label position="stacked" mode="ios">
+        Email
+      </ion-label>
+      <ion-input value="sai@gmail.com">
+      </ion-input>
+    </ion-item>
+    <ion-item mode="md" class="info_item" lines="none">
+      <ion-label position="stacked" mode="ios">
+        Mobile
+      </ion-label>
+      <ion-input value="+91">
+      </ion-input>
+    </ion-item>
+    <ion-item mode="md" class="info_item" lines="none">
+      <ion-label position="stacked" mode="ios">
+        Lunguage
+      </ion-label>
+      <ion-input value="English">
+      </ion-input>
+    </ion-item>
+    <!-- <ion-item mode="md" class="info_item" lines="none">
+      <ion-label position="stacked" mode="ios">
+        Currency
+      </ion-label>
+      <ion-input value="USD">
+      </ion-input>
+    </ion-item> -->
+  </div>
+  <div class="password_header">
+    <p class="change_lbl">Change Password
+      <ion-button class="ion-float-right transparent_btn edit_btn">
+        <ion-icon src="../../../assets/image/blue_edit.svg"></ion-icon>
+      </ion-button>
+    </p>
+
+
+  </div>
+  <div class="password_div ion-margin-horizontal">
+    <ion-item mode="md" class="info_item" lines="none">
+      <ion-label position="stacked" mode="ios">
+        Old Password
+      </ion-label>
+      <ion-input value="admin" type="password">
+      </ion-input>
+    </ion-item>
+    <ion-item mode="md" class="info_item" lines="none">
+      <ion-label position="stacked" mode="ios">
+        New Password
+      </ion-label>
+      <ion-input value="admin" type="password">
+      </ion-input>
+    </ion-item>
+    <ion-item mode="md" class="info_item" lines="none">
+      <ion-label position="stacked" mode="ios">
+        Confirm Password
+      </ion-label>
+      <ion-input value="admin" type="password">
+      </ion-input>
+    </ion-item>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-button class="main_btn" expand="full">
+    Save
+  </ion-button>
+</ion-footer>

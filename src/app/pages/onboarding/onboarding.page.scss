@@ -1,0 +1,29 @@
+ion-content {
+  ion-slides {
+    height: 550px;
+    ion-slide {
+      display: block;
+      height: 375px;
+      .img_div {
+        margin: 90px 16px 0px 16px;
+        .slide_tittle {
+          font-size: 22px;
+          font-family: "nunito_sb";
+          color: var(--my_theme);
+          margin-top: 150px;
+        }
+        .slide_info {
+          font-size: 18px;
+          font-family: "nunito_sb";
+          color: var(--light_blck);
+        }
+      }
+    }
+  }
+}
+
+.slides-md,
+.slides-ios {
+  --bullet-background: var(--my_theme) !important;
+  --bullet-background-active: var(--my_theme) !important;
+}

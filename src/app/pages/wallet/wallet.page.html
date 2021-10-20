@@ -1,0 +1,114 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-menu-button>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title>Weather</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="add_amount ion-margin-horizontal">
+
+      <ion-item> 
+        <ion-label>Thing</ion-label>
+        <ionic-selectable
+        
+          [(ngModel)]="port.device"
+          [items]="ports"
+          itemValueField="device"
+          itemTextField="device"
+          [canSearch]="true"
+          (onChange)="portChange($event)">
+        </ionic-selectable>
+      </ion-item>
+      <ion-item>
+        <ion-label>C Zone</ion-label>
+        <ionic-selectable
+        
+          [(ngModel)]="czoneport"
+          [items]="czoneports"
+          itemValueField="name"
+          itemTextField="name"
+          [canSearch]="true"
+          (onChange)="czoneportChange($event)">
+        </ionic-selectable>
+      </ion-item>
+      <!-- <ion-item>
+        <ion-label>P Zone</ion-label>
+        <ionic-selectable
+        
+          [(ngModel)]="port.name"
+          [items]="pzoneports"
+          itemValueField="name"
+          itemTextField="name"
+          [canSearch]="true"
+          (onChange)="portChange($event)">
+        </ionic-selectable>
+      </ion-item> -->
+      <ion-item>
+        <ion-label>Plant</ion-label>
+        <ionic-selectable
+        
+          [(ngModel)]="plantport"
+          [items]="plantports"
+          itemValueField="name"
+          itemTextField="name"
+          [canSearch]="true"
+          (onChange)="plantportChange($event)">
+        </ionic-selectable>
+      </ion-item>
+      
+      
+  
+
+    <ion-card-content fullscreen  id="map2" style="position: relative;height: 300px; width: 350px; outline: none;" >
+    </ion-card-content>
+  </div>
+  
+  <div class="transaction_div">
+    <div class="transaction_header">
+      <p class="header_lbl">{{selectedting}}</p>
+      <ion-segment [(ngModel)]="transaction">
+        <ion-segment-button value="all">
+          <ion-label>All</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="moin">
+          <ion-label>Data</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="moout">
+          <ion-label>Temp</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+
+    <div [ngSwitch]="transaction" class="ion-margin-horizontal transaction_data">
+
+      <div *ngSwitchCase="'all'">
+     
+        <ion-item>
+          <ion-label position="floating">Data</ion-label>
+          <ion-textarea>
+            {{ datacem }}
+          </ion-textarea>
+        </ion-item>
+        
+      </div>
+
+      <div *ngSwitchCase="'moin'">
+       
+         
+          <ion-item color="light"> <ion-input type="string" placeholder="datacem" [(ngModel)]="datacem.data" readonly></ion-input> </ion-item>
+        
+      </div>
+
+      <div *ngSwitchCase="'moout'">
+     
+        <ion-item color="light"> <ion-input type="string" placeholder="datacem" [(ngModel)]="datacem.datetime" readonly></ion-input> </ion-item>
+        <ion-item color="light"> <ion-input type="string" placeholder="datacem" [(ngModel)]="datacem.temp" readonly></ion-input> </ion-item>
+      </div>
+    </div>
+  </div>
+</ion-content>

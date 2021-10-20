@@ -1,0 +1,88 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Payment Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_div ion-margin-horizontal">
+    <div class="total_fare_div">
+      <div class="outer_circle">
+        <div class="inner_circle">
+          ${{data?.total}}
+        </div>
+      </div>
+      <p class="main_lbl">Total Fare</p>
+    </div>
+    <ion-row>
+      <ion-col size="6" class="pickup_col">
+        <p class="info_lbl">Pickup Date</p>
+        <p class="data_lbl">
+          <ion-icon src="../../../assets/image_svg/cal_icon.svg"></ion-icon> {{data?.pickupdate}}
+        </p>
+        <p class="info_lbl">Pickup Time</p>
+        <p class="data_lbl">
+          <ion-icon src="../../../assets/image_svg/watch_icon.svg"> </ion-icon> {{data?.pickuptime}}
+        </p>
+      </ion-col>
+      <ion-col size="6" class="delivery_col">
+        <p class="info_lbl">Delivery Date</p>
+        <p class="data_lbl">
+          <ion-icon src="../../../assets/image_svg/cal_icon.svg"> </ion-icon> {{data?.deliverydate}}
+        </p>
+        <p class="info_lbl">Delivery Time</p>
+        <p class="data_lbl">
+          <ion-icon src="../../../assets/image_svg/watch_icon.svg"></ion-icon> {{data?.deliverytime}}
+        </p>
+      </ion-col>
+    </ion-row>
+    <p class="info_lbl div_lbl">Dellivery Detail</p>
+    <div class="delivery_detail">
+      <div class="pickup_div">
+
+        <ion-icon src="../../../assets/image_svg/pickup_icon.svg"></ion-icon>
+        <div class="pickup_detail">
+          <h3 class="pickup_lbl">Pickup Location</h3>
+          <p class="pickup_user">{{data?.pickupUser}}</p>
+          <p class="pickup_user pickup_address">{{data?.pickaddress}}</p>
+        </div>
+      </div>
+      <div class="pickup_div drop_location">
+        <ion-icon src="../../../assets/image_svg/pin-icon.svg"></ion-icon>
+        <div class="pickup_detail">
+          <h3 class="pickup_lbl">Drop Location</h3>
+          <p class="pickup_user">{{data?.dropuser}}</p>
+          <p class="pickup_user pickup_address">{{data?.dropaddress}}</p>
+        </div>
+      </div>
+    </div>
+    <p class="info_lbl div_lbl">Bill Detail</p>
+    <div class="bill_detail">
+      <p class="bill_p">Fare <span class="ion-float-right">${{data?.fare}}</span></p>
+      <p class="bill_p">Distance <span class="ion-float-right">${{data?.distance}}</span></p>
+      <p class="bill_p">Time (12.23 Min)<span class="ion-float-right">{{data?.time}}</span></p>
+      <p class="bill_p discount">Discount <span class="ion-float-right">-${{data?.discount}}</span></p>
+      <p class="bill_p total">Total <span class="ion-float-right">${{data?.total}}</span></p>
+    </div>
+    <div class="review_div">
+      <ion-icon [name]="rate >= 1 ? 'star':'star-outline'" (click)="rate=1"></ion-icon>
+      <ion-icon [name]="rate >= 2 ? 'star':'star-outline'" (click)="rate=2"></ion-icon>
+      <ion-icon [name]="rate >= 3 ? 'star':'star-outline'" (click)="rate=3"></ion-icon>
+      <ion-icon [name]="rate >= 4 ? 'star':'star-outline'" (click)="rate=4"></ion-icon>
+      <ion-icon [name]="rate >= 5 ? 'star':'star-outline'" (click)="rate=5"></ion-icon>
+
+
+      <ion-input placeholder="how was your experience?" class="experience">
+
+      </ion-input>
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-button class="main_btn" expand="full" (click)="presentModal()">
+    Submit
+  </ion-button>
+</ion-footer>

@@ -1,0 +1,28 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="home" icon="chevron-back-outline" text="" mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Add Location
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <agm-map [styles]="styles" [latitude]="Centerlat" [longitude]="Centerlng" [disableDefaultUI]="true">
+    <agm-marker [latitude]="Centerlat" [longitude]="Centerlng" [iconUrl]="iconUrl">
+    </agm-marker>
+  </agm-map>
+  <div class="searchbar_div ion-margin-horizontal">
+    <ion-searchbar mode="md" clearIcon="string" value="5 Ravenhurst Drive Birmingham"></ion-searchbar>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-button class="main_btn" expand="full" (click)="singleDelivery()">
+    Add Location
+  </ion-button>
+</ion-footer>

@@ -1,0 +1,29 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      H Tracker
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_div ion-margin-horizontal">
+    <p class="info">Select Asset</p>
+    <div class="select_delivery_row">
+      <div class="service" *ngFor="let item of servicelist" (click)="singleDelivery()">
+        <div class="header_div">
+          <!-- <p class="delivery_type">Single Asset</p> -->
+        </div>
+        <div class="data_div">
+          <img [src]="item?.img" style="width: 80px;">
+          <p class="name">{{item?.name}}</p>
+          <p class="service_detail">{{item?.service_detail}}</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</ion-content>

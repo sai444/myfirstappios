@@ -1,0 +1,14 @@
+ion-content {
+  .tittle_div {
+    height: 40px;
+    border: solid 1px var(--lht_gray);
+    border-radius: 5px;
+  }
+  .reson {
+    font-size: 14px;
+    color: var(--lht_gray);
+    font-family: "nunito_r";
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}

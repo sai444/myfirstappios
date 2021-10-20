@@ -1,0 +1,31 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="home" icon="chevron-back-outline" text="" mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      single delivery
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-margin-horizontal main_div">
+    <div class="car_img_div">
+      <img src="../../../assets/image_svg/big_car.svg">
+      <h3 class="name">{{data?.name}}</h3>
+      <p class="detail">{{data?.detail}}</p>
+    </div>
+    <div class="data_div">
+      <p class="info_lbl capacity">Capacity <span class="ion-float-right">{{data?.capacity}}</span></p>
+      <p class="info_lbl">Fare <span class="ion-float-right">${{data?.fare}}</span></p>
+      <p class="info_lbl">Distance <span class="ion-float-right">${{data?.distance}}</span></p>
+      <p class="info_lbl">Time (12.33 Min) <span class="ion-float-right">{{data?.time}}</span></p>
+      <p class="info_lbl capacity">Discount <span class="ion-float-right">${{data?.discount}}</span></p>
+      <p class="info_lbl total">Total <span class="ion-float-right"> ${{data?.total}}</span></p>
+    </div>
+  </div>
+</ion-content>

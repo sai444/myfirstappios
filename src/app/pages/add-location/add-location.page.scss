@@ -1,0 +1,12 @@
+ion-content {
+  .searchbar_div {
+    position: absolute;
+    width: 91.5%;
+    top: 5px;
+    ion-searchbar {
+      // margin-top: 10px;
+      font-size: 14px;
+      color: var(--gray);
+    }
+  }
+}

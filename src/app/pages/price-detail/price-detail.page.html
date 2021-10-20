@@ -1,0 +1,84 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>
+      Multi delivery
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-margin-horizontal main_div">
+    <div class="car_img_div">
+      <img src="../../../assets/image_svg/big_car.svg">
+      <h3 class="name">{{data?.vehicle}}</h3>
+    </div>
+    <p class="div_lbl">Bill Detail</p>
+    <div class="bill_detail">
+      <p class="bill_p">Fare <span class="ion-float-right">${{data?.fare}}</span></p>
+      <p class="bill_p">Distance <span class="ion-float-right">${{data?.distance}}</span></p>
+      <p class="bill_p">Time (12.23 Min)<span class="ion-float-right">{{data?.time}}</span></p>
+      <p class="bill_p discount">Discount <span class="ion-float-right">-${{data?.discount}}</span></p>
+      <p class="bill_p total">Total <span class="ion-float-right">${{data?.total}}</span></p>
+    </div>
+    <p class="div_lbl">Responsible For Payment</p>
+    <div class="payment_div">
+      <ion-item lines="none" class="payment_item">
+        <ion-label class="info_lbl">Sender</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+
+      </ion-item>
+      <ion-item lines="none" class="payment_item">
+        <ion-checkbox slot="end"></ion-checkbox>
+        <ion-label class="info_lbl">Receiver
+          <div class="recipient_div">
+            Recipient 1 (name) <ion-checkbox value="first"></ion-checkbox>
+          </div>
+          <div class="recipient_div">
+            Recipient 2 (name) <ion-checkbox></ion-checkbox>
+          </div>
+
+        </ion-label>
+
+
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label class="info_lbl">Each Recipient
+          <div class="each_div">Each recipient has to pay $25</div>
+        </ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+
+      </ion-item>
+    </div>
+    <div class="btn_div">
+      <p class="cash_p">
+        <ion-icon src="../../../assets/image_svg/cash.svg"></ion-icon> Cash
+      </p>
+      <p class="cash_p" (click)="cardDetail()">
+        <ion-icon src="../../../assets/image_svg/card.svg"></ion-icon> Card
+      </p>
+      <p class="cash_p" (click)="cuponDetail()">
+        <ion-icon src="../../../assets/image_svg/coupon.svg"></ion-icon> Coupon
+      </p>
+    </div>
+
+  </div>
+  <div class="segment_div">
+    <div class="data_div">
+      Vehicle type
+      <span class="arrow"></span>
+    </div>
+    <div class="data_div">
+      Route
+    </div>
+    <div class="data_div select_div">
+      Price
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-button class="main_btn" expand="full" (click)="presentModal()">Deliver Now</ion-button>
+</ion-footer>

@@ -1,0 +1,60 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Single Delivery</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <agm-map [styles]="styles" [latitude]="Centerlat" [longitude]="Centerlng" [disableDefaultUI]="true">
+    <agm-direction [origin]="origin" [destination]="destination" [renderOptions]="renderOptions"
+      [markerOptions]="markerOptions">
+    </agm-direction>
+    <agm-marker [latitude]="markerlat" [longitude]="markerlng" [iconUrl]="iconUrl">
+    </agm-marker>
+  </agm-map>
+  <div class="location-section">
+    <ion-item mode="md" lines="none" class="pickup-section">
+      <ion-icon slot="start" src="../../../assets/image_svg/pickup_icon.svg" class="first-icon"></ion-icon>
+      <ion-label mode="md" position="stacked" class="input-info-label">Pickup Location</ion-label>
+      <ion-input mode="md" value="Claro Works, Claro Road, Herrogate" readonly></ion-input>
+    </ion-item>
+    <ion-item mode="md" lines="none">
+      <ion-icon slot="start" src="../../../assets/image_svg/pin-icon.svg" class="first-icon"></ion-icon>
+      <ion-label mode="md" position="stacked" class="input-info-label">Drop Location</ion-label>
+      <ion-input mode="md" placeholder="" value="5 Ravenhurst Drive, Briminghan" readonly></ion-input>
+    </ion-item>
+  </div>
+  <div class="confirmation_code" *ngIf="isconfirm">
+    <p class="confirm_p">Delivery confirmation code : 268 632</p>
+  </div>
+  <div class="driver_div">
+    <div class="info_div ion-margin-horizontal">
+      <img [src]="data?.img">
+      <div class="detail_div">
+        <h3 class="name">{{data?.name}}</h3>
+        <p class="vehicle">Vehicle Name: {{data?.vehicle}}</p>
+        <p class="vehicle">Vehicle No: {{data?.number}}</p>
+        <p class="star_p">
+          <ion-icon [name]="data?.rate >= 1 ? 'star' : 'star-outline'"></ion-icon>
+          <ion-icon [name]="data?.rate >= 2 ? 'star' : 'star-outline'"></ion-icon>
+          <ion-icon [name]="data?.rate >= 3 ? 'star' : 'star-outline'"></ion-icon>
+          <ion-icon [name]="data?.rate >= 4 ? 'star' : 'star-outline'"></ion-icon>
+          <ion-icon [name]="data?.rate >= 5 ? 'star' : 'star-outline'"></ion-icon>
+          <span class="vehicle">{{data?.rate}}</span>
+        </p>
+      </div>
+    </div>
+    <div class="btn_div" [class]="isconfirm==0 ? 'btn_div': 'confirm_btn_div'">
+      <ion-button class="main_btn">Call</ion-button>
+      <ion-button class="main_btn" (click)="message()">Message</ion-button>
+      <ion-button class="main_btn share_btn" (click)="presentModal()">Share</ion-button>
+      <ion-button class="main_btn close_btn ion-float-right" *ngIf="isconfirm==0" (click)="reasonModal()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+
+    </div>
+  </div>
+</ion-content>

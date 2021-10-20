@@ -1,0 +1,9 @@
+ion-content {
+  --background: var(--my_theme);
+  .text {
+    color: var(--white);
+    font-size: 18px;
+    font-family: "nunito_sb";
+    margin-bottom: 7px;
+  }
+}

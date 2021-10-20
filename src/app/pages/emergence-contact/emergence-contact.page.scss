@@ -1,0 +1,68 @@
+ion-content {
+  .div_img {
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 15px;
+    .outer_div {
+      margin: auto;
+      height: 124px;
+      width: 124px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: solid 1px var(--my_theme);
+      .inner_div {
+        height: 94px;
+        width: 94px;
+        background-color: var(--my_theme);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .info_lbl {
+      font-size: 20px;
+      font-family: "nunito_sb";
+      color: var(--my_theme);
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+    .msg_lbl {
+      font-size: 14px;
+      color: var(--lht_gray);
+      font-size: 14px;
+      margin: 0;
+    }
+    .add_lbl {
+      font-size: 16px;
+      font-family: "nunito_sb";
+      color: var(--black);
+      margin-bottom: 5px;
+      margin-top: 30px;
+    }
+    .detail_p {
+      width: 80%;
+      margin: auto;
+    }
+    .add_btn {
+      text-transform: capitalize;
+      margin-top: 30px;
+    }
+  }
+  .contact_item {
+    --border-radius: 5px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.16);
+    margin-bottom: 20px;
+    .name {
+      font-size: 14px;
+      font-family: "nunito_r";
+      color: var(--lht_gray);
+      margin: 0;
+    }
+    ion-icon {
+      color: var(--my_theme);
+    }
+  }
+}

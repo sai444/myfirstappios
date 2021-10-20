@@ -1,0 +1,97 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-menu-button>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title>ALERTS</ion-title>
+  </ion-toolbar>
+  <div class="segment_header">
+    <div class="left_col segment_div" (click)="chageTab('past')" [ngClass]="{ active: activeTab == 'past' }">
+      Open
+    </div>
+    <div class="right_col segment_div" (click)="chageTab('upcoming')" [ngClass]="{ active: activeTab == 'upcoming' }">
+      Close
+    </div>
+  </div>
+</ion-header>
+
+<ion-content>
+  <ng-container [ngSwitch]="activeTab">
+    <ng-container *ngSwitchCase="'past'">
+      <ng-container *ngFor="let item of alertdataname">
+        <p class="main_lbl">#ID {{item.id}}</p>
+        <div class="card_div ion-margin-horizontal">
+          <div class="booking_div">
+            <!-- <img [src]="item?.img"> -->
+            <div class="data_div">
+              <h3 class="name">{{item.thing}}</h3>
+              <p class="address">{{item.alertmsg}}</p>
+         
+            </div>
+          </div>
+          <div class="pickup_div" >
+            <div class="date_div">
+              <p class="main_lbl date_lbl">Alert Date Time</p>
+              <p class="date">
+                <ion-icon src="../../../assets/image_svg/cal_icon.svg"></ion-icon> {{item.createdon}}
+              </p>
+            </div>
+            <div class="date_div">
+              <p class="main_lbl date_lbl">Status</p>
+              <p class="date">
+                <ion-icon src="../../../assets/image_svg/watch_icon.svg"></ion-icon> {{item.resolvedstatus}}
+              </p>
+            </div>
+          </div>
+            <div>
+           <div >
+            <ion-button expand="block" (click)="resoveaction(item.id)">
+              Resolve
+            </ion-button>
+           </div>
+            
+          </div>
+        </div>
+      </ng-container>
+    </ng-container>
+    <ng-container *ngSwitchCase="'upcoming'">
+      <ng-container *ngFor="let item of alertdataold">
+        <p class="main_lbl">Alert Id{{item.id}}</p>
+        <div class="card_div ion-margin-horizontal">
+          <div class="booking_div">
+            <!-- <img [src]="item?.img"> -->
+            <div class="data_div">
+              <h3 class="name">{{item.thing}}</h3>
+              <p class="address">{{item.alertmsg}}</p>
+            
+            </div>
+          </div>
+          <div class="pickup_div" >
+            <div class="date_div">
+              <p class="main_lbl date_lbl">Alrt Date Time</p>
+              <p class="date">
+                <ion-icon src="../../../assets/image_svg/cal_icon.svg"></ion-icon> {{item.createdon}}
+              </p>
+            </div>
+            <div class="date_div">
+              <p class="main_lbl date_lbl">Status</p>
+              <p class="date">
+                <ion-icon src="../../../assets/image_svg/watch_icon.svg"></ion-icon> {{item.resolvedstatus}}
+              </p>
+            </div>
+          </div>
+          <!-- <ion-button class="reschedule_btn">
+            Reshedule
+          </ion-button> -->
+          <!-- <div class="btn_div">
+           
+            <ion-button class="cancel_btn">
+              Cancel Booking
+            </ion-button>
+          </div> -->
+        </div>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+</ion-content>

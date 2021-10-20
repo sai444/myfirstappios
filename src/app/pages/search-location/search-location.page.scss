@@ -1,0 +1,86 @@
+ion-header {
+  ion-searchbar {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--gray);
+  }
+}
+
+ion-content {
+  .favorite_location {
+    .secation_lbl {
+      font-size: 18px;
+      font-family: "nunito_sb";
+      color: var(--black);
+      margin-top: 10px;
+    }
+    .favorite_location_item {
+      --padding-start: 0;
+      --inner-padding-end: 0;
+      height: 68px;
+      .info_lbl {
+        font-size: 16px;
+        font-family: "nunito_sb";
+        color: var(--black);
+        margin-top: 0px;
+      }
+      ion-icon {
+        margin-right: 10px;
+        width: 16px;
+        height: 15px;
+        align-self: baseline;
+      }
+      .pin_icon {
+        height: 19px;
+      }
+      .address {
+        font-size: 14px;
+        font-family: "nunito_r";
+        color: var(--gray);
+      }
+      .location_lbl {
+        font-size: 16px;
+        font-family: "nunito_sb";
+        color: var(--my_theme);
+      }
+    }
+    .location_item {
+      padding-top: 10px;
+    }
+  }
+  .location_header_div {
+    height: 50px;
+    background-color: var(--my_theme);
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    .recent_lbl {
+      color: var(--white);
+      font-size: 18px;
+      font-family: "nunito_sb";
+      padding-left: 16px;
+    }
+  }
+  .recent_location_div {
+    background-color: var(--back_color);
+    padding: 10px 16px;
+    .recent_item {
+      --padding-start: 0;
+      --inner-padding-end: 0;
+      --background: transparent;
+      .recent_address {
+        white-space: normal;
+        font-size: 16px;
+        color: var(--gray);
+        font-family: "nunito_r";
+      }
+      ion-icon {
+        margin-right: 10px;
+        height: 19px;
+        width: 12px;
+        align-self: baseline;
+        margin-top: 15px;
+      }
+    }
+  }
+}

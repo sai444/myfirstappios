@@ -1,0 +1,24 @@
+ion-content {
+  --background: url("../../../assets/image/success-back.svg") no-repeat center
+    center / cover;
+  .main_div {
+    padding-top: 40px;
+    display: grid;
+    img {
+      margin: auto;
+    }
+  }
+  .transparent_btn {
+    font-size: 22px;
+    --color: var(--my_theme);
+    font-family: "nunito_sb";
+    text-transform: capitalize;
+    margin-top: 35px;
+  }
+  .text {
+    font-size: 16px;
+    color: var(--lht_gray);
+    font-family: "nunito_r";
+    margin: 0;
+  }
+}

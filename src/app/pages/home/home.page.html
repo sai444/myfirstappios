@@ -1,0 +1,115 @@
+<ion-header class="ion-no-border">
+
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      H Tracker 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<p>{{loginmsg}}</p>
+<ion-content>
+
+  <!-- <ion-searchbar type="text" debounce="500" (ionChange)="getItems($event)"></ion-searchbar>
+  <ion-list *ngIf="isItemAvailable">
+      <ion-item *ngFor="let item of items">{{ item }}</ion-item>
+  </ion-list>-->
+  <ion-item> 
+    <ion-label>Thing</ion-label>
+    <ionic-selectable
+    
+      [(ngModel)]="port.device"
+      [items]="ports"
+      itemValueField="device"
+      itemTextField="device"
+      [canSearch]="true"
+      (onChange)="portChange($event)">
+    </ionic-selectable>
+  </ion-item>
+  <ion-item>
+    <ion-label>C Zone</ion-label>
+    <ionic-selectable
+    
+      [(ngModel)]="czoneport"
+      [items]="czoneports"
+      itemValueField="name"
+      itemTextField="name"
+      [canSearch]="true"
+      (onChange)="czoneportChange($event)">
+    </ionic-selectable>
+  </ion-item>
+  <!-- <ion-item>
+    <ion-label>P Zone</ion-label>
+    <ionic-selectable
+    
+      [(ngModel)]="port.name"
+      [items]="pzoneports"
+      itemValueField="name"
+      itemTextField="name"
+      [canSearch]="true"
+      (onChange)="portChange($event)">
+    </ionic-selectable>
+  </ion-item> -->
+  <!-- <ion-item>
+    <ion-label>Plant</ion-label>
+    <ionic-selectable
+    
+      [(ngModel)]="plantport"
+      [items]="plantports"
+      itemValueField="name"
+      itemTextField="name"
+      [canSearch]="true"
+      (onChange)="plantportChange($event)">
+    </ionic-selectable>
+  </ion-item>
+   -->
+  <!-- <ion-item>
+    <ion-label>Asset</ion-label>
+    <ion-select [(ngModel)]="thingselected" [compareWith]="compareFn">
+      <ion-option *ngFor="let employee of livedata" [value]="livedata.devicename"></ion-option>
+    </ion-select>
+  </ion-item> -->
+  <div class="ion-margin-horizontal">
+    <h3 class="tittle_lbl">Live Tracking</h3>
+    <ion-card-content fullscreen   id="mapa" style="position: relative;height: 300px; outline: none;" >
+    </ion-card-content>
+    <h3 class="tittle_lbl">New Alerts <ion-button class="view_all_btn transparent_btn" (click)="driverList()">view
+        all</ion-button>
+    </h3>
+    <div class="driver_row">
+      <div class="driver" *ngFor="let item of alertdatanew">
+        <div class="header_div">
+          <p class="away"><span class="ion-float-right">#ID {{item.id}} </span></p>
+        </div>
+        <div class="data_div">
+          <div class="category_div">
+            New
+          </div>
+          <!-- <img [src]="item?.img"> -->
+          <p class="name">Alert Id {{item.thing}}</p>
+          <p class="service_type">Alert Message : {{item.alertmsg}}</p>
+
+          <p class="service_type">Date Time :  {{item.createdon}}</p>
+          <p class="service_type">Status :    {{item.resolvedstatus}}</p>
+        
+         
+
+        </div>
+      </div>
+    </div>
+   
+  </div>
+  <!-- <ion-button (click)="single_notification()">
+    Single Notification
+  </ion-button>
+  
+  <ion-button (click)="multi_notification()">
+    Multi Notifcations
+  </ion-button>
+  
+  <ion-button (click)="delayed_notification()">
+    Delayed Notification
+  </ion-button> -->
+</ion-content>

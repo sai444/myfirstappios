@@ -1,0 +1,24 @@
+ion-content {
+  .main_div {
+    padding-top: 10px;
+  }
+  ion-item {
+    border-bottom: dotted;
+    border-bottom-color: var(--lht_gray);
+    border-bottom-width: 1px;
+    --padding-start: 0;
+    margin-bottom: 10px;
+    ion-input {
+      font-size: 16px;
+      --color: var(--lht_gray);
+      font-family: "nunito_sb";
+      --placeholder-opacity: 1;
+    }
+  }
+  ion-textarea {
+    margin-top: 20px;
+    border: solid 1px var(--my_theme);
+    border-radius: 5px;
+    --color: var(--lht_gray);
+  }
+}

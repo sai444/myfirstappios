@@ -1,0 +1,28 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="home" icon="chevron-back-outline" text="" mode="md"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>
+      Delivery junction
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_div ion-margin-horizontal">
+    <h3 class="tittle_lbl">My Contact</h3>
+    <div class="contact_div" *ngFor="let item of contactList">
+      <img [src]="item?.img">
+      <div class="contact_detail">
+        <ion-button fill="outline" class="send_btn" (click)="selectDelivery()">Send</ion-button>
+        <h3 class="con_name">{{item?.name}}</h3>
+        <p class="address">{{item?.address}}</p>
+      </div>
+    </div>
+  </div>
+</ion-content>
